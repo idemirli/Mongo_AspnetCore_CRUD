@@ -41,7 +41,7 @@ namespace SampleCore.API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.Configure<MongoDbSettings>(Configuration.GetSection("MongoDbSettings")); //DI Configure AppSettings
+            services.Configure<MongoDbSettings>(Configuration.GetSection("MongoDbSettings")); //DI Configure AppSettings-
             services.AddScoped<IMongoBManager, MongoBManager>();
             services.AddScoped<IMongoDBContext, MongoDbContext>();
             services.AddScoped<ISampleRepository, SampleRepository>();
