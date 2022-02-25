@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using AutoMapper;
-using DAL.MongoDbService.Concrete;
+using Contract.DTO;
 
 namespace DAL.Mapper.ProfileSample
 {

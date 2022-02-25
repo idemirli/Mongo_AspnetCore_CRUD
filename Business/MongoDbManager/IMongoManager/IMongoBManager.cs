@@ -1,4 +1,4 @@
-﻿using DAL.MongoDbService.Concrete;
+﻿using Contract.DTO;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,7 +13,7 @@ namespace Business.MongoDbManager.IMongoManager
         Task Create(SampleDTO obj);
         void Update(SampleDTO obj);
         void Delete(string id);
-        Task<SampleDTO> Get(string id);
-        Task<IEnumerable<SampleDTO>> Get();
+        SampleDTO Get(string id);
+        IEnumerable<SampleDTO> Get();
     }
 }

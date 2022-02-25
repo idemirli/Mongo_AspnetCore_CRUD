@@ -1,5 +1,5 @@
 ﻿using Business.MongoDbManager.IMongoManager;
-using DAL.MongoDbService.Concrete;
+using Contract.DTO;
 using DAL.MongoDbService.Repository;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
@@ -26,7 +26,7 @@ namespace SampleCore.API.Controllers
         {
             try
             {
-                Task<IEnumerable<SampleDTO>> lst = _mongoManager.Get();
+                IEnumerable<SampleDTO> lst = _mongoManager.Get();
                 return Ok(new { result = "Success", data = lst });
             }
             catch (Exception ex)
@@ -41,7 +41,7 @@ namespace SampleCore.API.Controllers
         {
             try
             {
-                Task<SampleDTO> model = _mongoManager.Get(id);
+                SampleDTO model = _mongoManager.Get(id);
                 return Ok(new { result = "Success", data = model });
             }
             catch (Exception ex)

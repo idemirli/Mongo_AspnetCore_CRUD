@@ -15,7 +15,6 @@ namespace DAL.Mapper
             var mapperConfig = new MapperConfiguration(mc =>
             {
                 mc.AddProfile(new SampleProfile());
-                //mc.AddProfile(new LessonProfile());
             });
             return mapperConfig.CreateMapper();
         }

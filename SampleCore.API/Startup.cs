@@ -1,7 +1,6 @@
 using AutoMapper;
 using Business.MongoDbManager;
 using Business.MongoDbManager.IMongoManager;
-using DAL.Entity;
 using DAL.Mapper;
 using DAL.MongoDbService.MongoDbContext;
 using DAL.MongoDbService.Repository;

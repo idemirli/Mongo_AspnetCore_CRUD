@@ -25,10 +25,4 @@
     <ProjectReference Include="..\Contract\Contract.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="DALService\" />
-    <Folder Include="Entity\MongoEntity\" />
-    <Folder Include="IDAL\" />
-  </ItemGroup>
-
 </Project>

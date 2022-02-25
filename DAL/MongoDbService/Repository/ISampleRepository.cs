@@ -1,4 +1,5 @@
-﻿using DAL.MongoDbService.Concrete;
+﻿using Contract.DTO;
+using DAL.Entity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DAL.MongoDbService.Repository
 {
-    public interface ISampleRepository : IBaseRepository<SampleDTO>
+    public interface ISampleRepository : IBaseRepository<SampleEntity>
     {
         void MyMethod(string s);
     }

@@ -11,7 +11,7 @@ namespace DAL.MongoDbService.Repository
         Task Create(TEntity obj);
         void Update(TEntity obj);
         void Delete(string id);
-        Task<TEntity> Get(string id);
-        Task<IEnumerable<TEntity>> Get();
+        TEntity Get(string id);
+        IEnumerable<TEntity> Get();
     }
 }

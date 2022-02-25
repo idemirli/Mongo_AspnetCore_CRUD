@@ -1,4 +1,6 @@
-﻿using DAL.MongoDbService.Concrete;
+﻿using AutoMapper;
+using Contract.DTO;
+using DAL.Entity;
 using DAL.MongoDbService.MongoDbContext;
 using MongoDB.Driver;
 using System;
@@ -9,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace DAL.MongoDbService.Repository
 {
-    public class SampleRepository : BaseRepository<SampleDTO>, ISampleRepository
+    public class SampleRepository : BaseRepository<SampleEntity>, ISampleRepository
     {
         public SampleRepository(IMongoDBContext context) : base(context)
         {
@@ -19,7 +21,7 @@ namespace DAL.MongoDbService.Repository
             //My Method operations
         }
 
-        public override void Update(SampleDTO obj)
+        public override void Update(SampleEntity obj)
         {
             _dbCollection.ReplaceOneAsync(s => s.Id == obj.Id, obj);
         }
