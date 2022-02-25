@@ -44,6 +44,7 @@ namespace Business.MongoDbManager
         public void Update(SampleDTO obj)
         {
             _sampleRepository.Update(_mapper.Map<SampleDTO, SampleEntity>(obj));
+
         }
     }
 }
